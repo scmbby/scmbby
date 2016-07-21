@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body >
+    <div class="sidebar">
+      <ul>
+            <li><a href="#"><img src="yumyumyum.gif" alt=sashimi></a></li>
+			<li><a href="abtme.html"><p style="font-family:Lucida Sans Unicode">ABOUT ME</p></a></li>
+            <li><a href="prgm.html"><p style="font-family:Lucida Sans Unicode">PROGRAMMING WORK</p></a></li>
+            <li><a href="#"><p style="font-family:Lucida Sans Unicode">ART</p></a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1>TEXT ADVENTURE</h1>
+	<pre>
+	import time
+	import sys
+
+	def wordFunction(anystringvariable): #i am defining a new function that takes any variable
+			#and prints it slowly
+			for l in anystringvariable: #does the normal thing
+					sys.stdout.write(l)
+					sys.stdout.flush()
+					time.sleep(.1)
+	wordFunction("start story? (yes/no):")
+	start_cmd = input()
+	if start_cmd == 'yes':
+		time.sleep(1)
+		wordFunction("left or right?:")
+		direction_cmd1 = input() 
+	else:
+		wordFunction("...gonna ask you again\n")
+		wordFunction("start story(yes/yes):")
+		start_cmd2 = input()
+		if start_cmd2 == 'yes':
+			time.sleep(1)
+			wordFucntion("glad you decided to cooperate...\n")
+			time.sleep(1)
+			wordFunction("lets start..\n")
+			time.sleep(1)
+			wordFunction("left or right?:")
+			direction_cmd1 = input()
+		else:
+			time.sleep(1)
+			wordFunction("........\n")
+			time.sleep(1)
+			wordFunction("alright buddy...im just gonna pretend you said yes..\n")
+			time.sleep(1)
+			wordFunction("and start the game..\n")
+			time.sleep(1)
+			wordFunction("left or right?:")
+			direction_cmd1 = input()
+	if direction_cmd1 == 'left':
+		time.sleep(1)
+		wordFunction("you run into a troll!!\n")
+		time.sleep(1)
+		wordFunction("fight or run?:")
+		f_f_cmd = input()
+		if f_f_cmd == 'fight':
+				wordFunction("the troll hits you on the head and you die\n")
+				time.sleep(1)
+				wordFunction("GAME OVER")
+		elif f_f_cmd == 'run':
+				wordFunction("the troll laughs as you run away\n")
+				time.sleep(1)
+				wordFunction("but you live..\n")
+				time.sleep(1)
+				wordFunction("GAME OVER")
+	elif direction_cmd1 == 'right':
+		time.sleep(1)
+		wordFunction("you walk up to a river..\n")
+		time.sleep(1)
+		wordFunction("swim across?(yes/no):")
+		river_choice = input()
+		if river_choice == 'yes':
+			time.sleep(1)
+			wordFunction("the current is too strong and you die\n.")
+			time.sleep(1)
+			wordFunction("GAME OVER")
+		if river_choice == 'no':
+			time.sleep(1)
+			wordFunction("you lie down by the river and take a nap.")
+			time.sleep(1)
+			wordFunction("GAME OVER")
+		else:
+			time.sleep(1)
+			wordFunction("look pal, you gotta pick yes or no..none of your hip new slang alright?\n")
+			time.sleep(1)
+			wordFunction("lets try again..\n")
+			time.sleep(1)
+			wordFunction("swim across?(yes/no):")
+			river_choice = input()
+
+			#CODE 
+	else:#if direction_cmd1 is not 'right' or 'left':
+		time.sleep(1)
+		wordFunction("cant you just play along?\n")
+		time.sleep(1)
+		wordFunction("lets all hold hands and sing kumbaya\n")
+		time.sleep(1)
+		wordFunction("or you could just exit the game and never know what happens when you go left or right :( \n")
+		time.sleep(1)
+		wordFunction("but i think im feeling generous today so.. lets try again..\n")
+		time.sleep(1)
+		wordFunction("left or right?:")
+		direction_cmd1 = input()
+		if direction_cmd1 is not 'right' or 'left':
+			wordFunction("fine...\n")
+			time.sleep(1)
+			wordFunction("if you wanna be like that..")
+			time.sleep(1)
+			wordFunction("then come back when your ready to play nice..\n")
+			time.sleep(1)
+			wordFunction("GAME OVER")
+			exit()
+	</pre>
+	</div>
+  </body>
+</html>

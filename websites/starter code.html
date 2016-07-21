@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Example</title>
+    <script>
+	function switchUp() {
+		var image = document.getElementById("spicy");
+		
+		if (image.src.match("annyn.png")) {
+			image.src = "gross.jpg";
+			image.alt = "why";
+		}
+		else {
+			image.src = "annyn.png";
+			image.alt = "bork"
+		}
+	}
+    </script>
+  </head>
+  <body>
+	<button onclick="switchUp()">broteinshakes</button>
+	<img id="spicy" src="annyn.png" alt="gross.jpg">
+  </body>
+</html>
